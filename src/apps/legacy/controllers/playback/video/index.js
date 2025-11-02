@@ -971,7 +971,7 @@ export default function (view) {
                     player: player,
                     positionTo: btn,
                     quality: state.MediaSource?.SupportsTranscoding,
-                    stats: true,
+                    stats: false,
                     suboffset: showSubOffset,
                     onOption: onSettingsOption
                 }).finally(() => {
@@ -1772,6 +1772,7 @@ export default function (view) {
         playbackManager.toggleAirPlay(currentPlayer);
     });
     view.querySelector('.btnVideoOsdSettings').addEventListener('click', onSettingsButtonClick);
+    view.querySelector('.btnPlayerStats').addEventListener('click', toggleStats);
     view.addEventListener('viewhide', function () {
         clearHideAnimationEventListeners(headerElement);
         headerElement.classList.remove('hide');
