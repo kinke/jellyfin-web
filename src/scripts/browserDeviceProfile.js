@@ -1230,12 +1230,6 @@ export default function (options) {
 
     const h264CodecProfileConditions = [
         {
-            Condition: 'NotEquals',
-            Property: 'IsAnamorphic',
-            Value: 'true',
-            IsRequired: false
-        },
-        {
             Condition: 'EqualsAny',
             Property: 'VideoProfile',
             Value: h264Profiles,
@@ -1256,12 +1250,6 @@ export default function (options) {
     ];
 
     const hevcCodecProfileConditions = [
-        {
-            Condition: 'NotEquals',
-            Property: 'IsAnamorphic',
-            Value: 'true',
-            IsRequired: false
-        },
         {
             Condition: 'EqualsAny',
             Property: 'VideoProfile',
@@ -1292,12 +1280,6 @@ export default function (options) {
     ];
 
     const av1CodecProfileConditions = [
-        {
-            Condition: 'NotEquals',
-            Property: 'IsAnamorphic',
-            Value: 'true',
-            IsRequired: false
-        },
         {
             Condition: 'EqualsAny',
             Property: 'VideoProfile',
